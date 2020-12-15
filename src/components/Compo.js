@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from 'react'
 
 export default function Compo() {
-  const [myState, setMyState] = useState('Hello')
-
-  const sayGoodBye = () => {
-    setMyState('Good Bye !')
-  }
+  const [dataImg, setDataImg] = useState('')
 
   useEffect(() => {
 
-    console.log('Composant monté/affiché')
+    const fetchData = async () => {
+      const response = await fetch('https://api.thecatapi.com/v1/images/search')
+      const data = await response.json()
+      setDataImg(data[0].url)
+    }
 
-  }, [myState])
+    fetchData()
+  }, [])
 
   return (
     <div>
-      <button onClick={sayGoodBye}>Click</button>
-      <p>{myState}</p>
+      <img src={dataImg} />
     </div>
   )
 }
