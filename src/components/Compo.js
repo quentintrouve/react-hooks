@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import useCatImg from '../hooks/useCatImg'
 
 export default function Compo() {
