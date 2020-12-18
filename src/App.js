@@ -1,9 +1,11 @@
-import Compo from './components/Compo'
+// import Compo from './components/Compo'
+import Contenu from './components/Contenu'
 
 function App() {
   return (
     <div className="App">
-      <Compo />
+      {/* <Compo /> */}
+      <Contenu />
     </div>
   );
 }
