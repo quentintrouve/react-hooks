@@ -1,16 +1,24 @@
-import React, { useState } from 'react'
+import React, { useState, useMemo, useCallBack } from 'react'
 import Enfant from './Enfant'
 
 export default function Contenu() {
 
   const [compteur, setCompteur] = useState(0)
 
+  const array = useMemo(() => {
+    return [1, 2, 3, 4, 5];
+  }, [])
+
+  const foo = useCallBack(() => {
+    console.log('foo')
+  }, [])
+
   return (
     <div>
       <h1>Composant parent</h1>
       <p>{compteur}</p>
       <button onClick={() => setCompteur(compteur + 1)}>Click moi</button>
-      <Enfant chaine="Props du composant enfant"></Enfant>
+      <Enfant chaine={array} myFunc={foo}></Enfant>
     </div>
   )
 }
