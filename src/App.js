@@ -13,11 +13,14 @@ function App() {
   const openModal = () => {
     setToggleShow(true)
   }
+  const stopPropa = (e) => {
+    e.stopPropagation();
+  }
 
   let myModal = '';
 
   if (toggleShow) {
-    myModal = <Modal close={closeModal} />
+    myModal = <Modal close={closeModal} stopPropa={stopPropa} />
   } else {
     myModal = '';
   }
