@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useCallBack } from 'react'
+import React, { useState, useMemo, useCallback } from 'react'
 import Enfant from './Enfant'
 
 export default function Contenu() {
@@ -9,7 +9,7 @@ export default function Contenu() {
     return [1, 2, 3, 4, 5];
   }, [])
 
-  const foo = useCallBack(() => {
+  const foo = useCallback(() => {
     console.log('foo')
   }, [])
 
