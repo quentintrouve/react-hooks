@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import Contenu from './components/Contenu'
 import Modal from './components/Modal/Modal'
 import Navbar from './components/Navbar/Navbar'
+import Compteur from './components/Compteur/Compteur'
 
 import './App.css'
 
@@ -51,6 +52,7 @@ function App() {
       <button className="buttonModal" onClick={openModal}>Open modal</button>
       {myModal}
       <span>X: {pos[0]}</span><span>Y: {pos[1]}</span>
+      <Compteur />
     </div>
   );
 }
