@@ -5,7 +5,7 @@ const Enfant = function ({ chaine, myFunc }) {
   console.log("Mise à jour du composant enfant")
 
   return (
-    <div>
+    <div className="childContent">
       <h2>Composant enfant</h2>
       <p>{chaine}</p>
       <button onClick={myFunc}>Click moi</button>

@@ -14,7 +14,7 @@ export default function Contenu() {
   }, [])
 
   return (
-    <div>
+    <div className="mainContent">
       <h1>Composant parent</h1>
       <p>{compteur}</p>
       <button onClick={() => setCompteur(compteur + 1)}>Click moi</button>
